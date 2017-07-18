@@ -1,0 +1,34 @@
+{
+  "name": "wc-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryandcoulter/wc-playground.git"
+  },
+  "author": "bryandcoulter@gmail.com",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-env": "^1.6.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "html-webpack-plugin": "^2.29.0",
+    "polymer-webpack-loader": "^1.2.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "dependencies": {
+    "date-fns": "^1.28.5"
+  },
+  "bugs": {
+    "url": "https://github.com/bryandcoulter/wc-playground/issues"
+  },
+  "homepage": "https://github.com/bryandcoulter/wc-playground#readme"
+}

@@ -1,0 +1,31 @@
+<dom-module-wc id="my-element">
+  <template>
+    <h3>I use dom-module-wc</h3>
+    <h1></h1>
+    <button>Load Polymer</button>
+    <my-polymer-element></my-polymer-element>
+  </template>
+  <script>
+    // Heyyyy, we're pulling in a Node module!
+    import format from 'date-fns/format';
+    import { CustomElement } from './js/CustomElement';
+    
+    class MyElement extends CustomElement {
+      static get is() { return 'my-element'; }
+      constructor() {
+        super();
+        this.attachShadow({mode: 'open'});
+        this.shadowRoot.appendChild(MyElement.template);
+        const button = this.shadowRoot.querySelector('button');
+        button.addEventListener('click',() =>{
+          import(/* webpackChunkName: "my-polymer-element" */ './my-polymer-element.html');
+        })
+      }
+      connectedCallback() {
+        this.shadowRoot.querySelector('h1').innerHTML = `Hello, World! It's ${format(new Date(), 'MM/DD/YYYY')}`;
+      }
+    }
+
+    window.customElements.define(MyElement.is, MyElement);
+  </script>
+</dom-module-wc>
