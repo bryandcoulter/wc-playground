@@ -1,4 +1,4 @@
-#WC-Playground
+# WC-Playground
 
 ## Setup
 
